@@ -1,0 +1,2 @@
+url,company_name,email,phone,description,social_links,tech_stack,domain_age_years,registrar,employee_estimate,revenue_estimate,industry,contact_quality,lead_score
+https://stripe.com,Stripe,,9812647081,Stripe is a suite of APIs powering online payment processing and commerce solutions for internet businesses of all sizes. Accept payments and scale faster with AI.,{},"['Angular', 'Shopify', 'Salesforce', 'Stripe']",30.1,Safenames Ltd,50-100,$10M-20M,SaaS,2.0,75

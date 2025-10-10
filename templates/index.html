@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadValidator Pro - AI-Powered Lead Enrichment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <h1>LeadValidator Pro</h1>
+            </div>
+            <p class="tagline">AI-Powered Lead Enrichment & Validation</p>
+        </header>
+
+        <!-- Stats Dashboard -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-content">
+                    <h3 id="totalLeads">0</h3>
+                    <p>Total Leads</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <div class="stat-content">
+                    <h3 id="avgScore">0</h3>
+                    <p>Avg Lead Score</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-envelope-circle-check"></i>
+                <div class="stat-content">
+                    <h3 id="validEmails">0</h3>
+                    <p>Valid Emails</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <div class="stat-content">
+                    <h3 id="conversionRate">0%</h3>
+                    <p>Quality Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2><i class="fas fa-search"></i> Find & Enrich Leads</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter company URL (e.g., stripe.com)" />
+                <button id="scrapeBtn" class="btn-primary">
+                    <i class="fas fa-magnifying-glass"></i> Scrape & Enrich
+                </button>
+            </div>
+            <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Scraping and enriching data...
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-section">
+            <h3><i class="fas fa-filter"></i> Filter Leads</h3>
+            <div class="filter-group">
+                <input type="number" id="minScore" placeholder="Min Score (0-100)" min="0" max="100" />
+                <input type="text" id="industryFilter" placeholder="Industry" />
+                <label class="checkbox-label">
+                    <input type="checkbox" id="emailFilter" />
+                    <span>Valid Email Only</span>
+                </label>
+                <button id="applyFilters" class="btn-secondary">Apply Filters</button>
+                <button id="resetFilters" class="btn-secondary">Reset</button>
+            </div>
+        </div>
+
+        <!-- Leads Table -->
+        <div class="leads-section">
+            <div class="section-header">
+                <h2><i class="fas fa-table"></i> Enriched Leads</h2>
+                <button id="exportBtn" class="btn-success">
+                    <i class="fas fa-download"></i> Export to CSV
+                </button>
+            </div>
+            <div class="table-container">
+                <table id="leadsTable">
+                    <thead>
+                        <tr>
+                            <th>Score</th>
+                            <th>Company</th>
+                            <th>Industry</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Employees</th>
+                            <th>Revenue</th>
+                            <th>Tech Stack</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTableBody">
+                        <tr class="empty-state">
+                            <td colspan="9">
+                                <i class="fas fa-inbox"></i>
+                                <p>No leads yet. Start by scraping a company URL above!</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built for Caprae Capital | Powered by AI-Driven Enrichment</p>
+        </footer>
+    </div>
+
+    <!-- Lead Detail Modal -->
+    <div id="leadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="leadDetails"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
