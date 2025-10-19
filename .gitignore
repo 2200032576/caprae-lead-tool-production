@@ -1,0 +1,141 @@
+# ============================================
+# CRITICAL: Environment Variables & Secrets
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+config.py  # If you hardcoded secrets here
+*.pem
+*.key
+*.cert
+secrets/
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ============================================
+# IDE & Editors
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Database Files
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+database.py  # If contains hardcoded credentials
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+log/
+*.log.*
+
+# ============================================
+# Data & Exports
+# ============================================
+data/
+exports/
+uploads/
+*.csv
+*.xlsx
+*.xls
+
+# Keep data folder structure but ignore contents
+!data/.gitkeep
+!exports/.gitkeep
+!uploads/.gitkeep
+
+# ============================================
+# Celery & Redis
+# ============================================
+celerybeat-schedule
+celerybeat.pid
+
+# ============================================
+# Testing
+# ============================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ============================================
+# Jupyter Notebook
+# ============================================
+.ipynb_checkpoints
+
+# ============================================
+# OS Files
+# ============================================
+Thumbs.db
+.DS_Store
+
+# ============================================
+# Temporary Files
+# ============================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# ============================================
+# Package Manager
+# ============================================
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================
+# Railway/Render Specific
+# ============================================
+.railway/
+railway.json
