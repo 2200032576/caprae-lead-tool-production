@@ -13,7 +13,7 @@ DB_CONFIG = {
     'port': int(os.getenv('DB_PORT', 3306)),
     'database': os.getenv('DB_NAME', '2200032576$default'),
     'user': os.getenv('DB_USER', '2200032576'),
-    'password': os.getenv('DB_PASSWORD', 'YOUR_DB_PASSWORD'),  # Replace with your actual password
+    'password': os.getenv('DB_PASSWORD', 'Aditya@2005'),  # Replace with your actual password
 }
 
 # Flask Configuration
